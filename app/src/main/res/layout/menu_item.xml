@@ -2,17 +2,18 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/white"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:gravity="center">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView5"
         android:layout_width="0dp"
         android:layout_height="87dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="8dp"
         android:elevation="10dp"
         app:cardCornerRadius="22dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,54 +23,61 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:elevation="20dp">
 
             <ImageView
-                android:id="@+id/imagePopuler"
+                android:id="@+id/menuImage"
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/logo" />
 
             <TextView
-                android:id="@+id/foodNamePopuler"
+                android:id="@+id/menuFoodName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="8dp"
                 android:text="Food Name"
                 android:textColor="@color/black"
-                app:layout_constraintBottom_toBottomOf="@+id/imagePopuler"
-                app:layout_constraintStart_toEndOf="@+id/imagePopuler"
-                app:layout_constraintTop_toTopOf="@+id/imagePopuler" />
+                app:layout_constraintBottom_toBottomOf="@+id/menuImage"
+                app:layout_constraintStart_toEndOf="@+id/menuImage"
+                app:layout_constraintTop_toTopOf="@+id/menuImage" />
 
             <TextView
-                android:id="@+id/pricePopular"
+                android:id="@+id/menuPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
                 android:text="$10"
+                android:textAlignment="center"
                 android:textColor="@color/textColor"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.69"
-                app:layout_constraintStart_toEndOf="@+id/foodNamePopuler"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/menuFoodName"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/addToCardPopular"
-                android:layout_width="80dp"
-                android:layout_height="20dp"
-                android:layout_marginTop="24dp"
+                android:id="@+id/menuAddToCard"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
                 android:background="@drawable/addtocardshape"
                 android:gravity="center"
                 android:text="Add To Card"
                 android:textColor="@color/white"
-                app:layout_constraintEnd_toEndOf="@+id/pricePopular"
-                app:layout_constraintStart_toStartOf="@+id/pricePopular"
-                app:layout_constraintTop_toBottomOf="@+id/pricePopular" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/menuPrice"
+                app:layout_constraintStart_toStartOf="@+id/menuPrice"
+                app:layout_constraintTop_toBottomOf="@+id/menuPrice" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>

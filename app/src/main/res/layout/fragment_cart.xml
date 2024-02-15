@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Fragment.CartFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -13,6 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="cart"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,16 +25,20 @@
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintBottom_toTopOf="@+id/procesButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/procesButton"
+        android:layout_width="325dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/procesbuttonshape"
+        android:text="Proceed"
+        android:textAllCaps="false"
+        android:textColor="@color/textColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

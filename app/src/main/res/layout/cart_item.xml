@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -11,26 +11,37 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="595dp"
         app:cardCornerRadius="15dp"
         app:cardElevation="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/cartImage"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/logo" />
 
             <TextView
                 android:id="@+id/cardFoodName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="TextView"
+                android:text="Name Food"
+                android:textSize="16sp"
                 app:layout_constraintBottom_toTopOf="@+id/cardItemPrice"
-                app:layout_constraintStart_toEndOf="@+id/imagePopuler"
+                app:layout_constraintStart_toEndOf="@+id/cartImage"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -38,9 +49,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="TextView"
+                android:text="$1"
+                android:textColor="@color/textColor"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imagePopuler"
+                app:layout_constraintStart_toEndOf="@+id/cartImage"
                 app:layout_constraintTop_toBottomOf="@+id/cardFoodName" />
 
             <ImageButton
@@ -51,12 +63,12 @@
                 android:background="@drawable/addtocardshape"
                 android:padding="2dp"
                 android:src="@drawable/minus"
-                app:layout_constraintBottom_toBottomOf="@+id/cardQuantity"
-                app:layout_constraintEnd_toStartOf="@+id/cardQuantity"
-                app:layout_constraintTop_toTopOf="@+id/cardQuantity" />
+                app:layout_constraintBottom_toBottomOf="@+id/cardItemQuantity"
+                app:layout_constraintEnd_toStartOf="@+id/cardItemQuantity"
+                app:layout_constraintTop_toTopOf="@+id/cardItemQuantity" />
 
             <TextView
-                android:id="@+id/cardQuantity"
+                android:id="@+id/cardItemQuantity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
@@ -81,22 +93,12 @@
                 android:id="@+id/deleteButton"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="16dp"
                 android:background="@android:color/transparent"
                 app:layout_constraintEnd_toEndOf="@+id/plusButton"
                 app:layout_constraintStart_toStartOf="@+id/minusButton"
                 app:layout_constraintTop_toBottomOf="@+id/plusButton"
                 app:srcCompat="@drawable/trash" />
-
-            <ImageView
-                android:id="@+id/imagePopuler"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                android:layout_marginStart="16dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/logo" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
