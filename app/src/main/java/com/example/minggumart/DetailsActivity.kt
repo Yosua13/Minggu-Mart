@@ -1,7 +1,9 @@
 package com.example.minggumart
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.minggumart.Fragment.CartFragment
 import com.example.minggumart.databinding.ActivityDetailsBinding
 
 class DetailsActivity : AppCompatActivity() {
@@ -20,5 +22,9 @@ class DetailsActivity : AppCompatActivity() {
         binding.imageButton.setOnClickListener {
             finish()
         }
+//        binding.addToCartButton.setOnClickListener {
+//            val intent = Intent(this@DetailsActivity, CartFragment::class.java)
+//            startActivity(intent)
+//        }
     }
 }

@@ -64,7 +64,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="TextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextView"
+        android:text="Kue sus memiliki nama lain, yaitu choux pastry atau profiterole. Kue sus adalah pastry asal Perancis yang terbuat dari tepung, air, mentega, dan telur. Teksturnya kental dan lengket.  Kue sus memiliki tekstur yang ringan dan berongga. Isinya bisa berupa krim pastry, krim kocok, atau es krim. Kue sus dipanggang hingga mengembang dan menghasilkan kulit kue yang bolong di tengah. Kulit ini kemudian dibelah dua dan diisi dengan pastry cream."
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/cardView4"
         app:layout_constraintStart_toStartOf="@+id/textView24"
@@ -85,10 +85,11 @@
 
     <TextView
         android:id="@+id/ingredientsTextView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Ayam 1 kg\nMicin 1 kg\nIkan 1 Ekor"
+        android:layout_marginRight="16dp"
+        android:text="Terigu Pro Tinggi, margarin, air, garam, telur, kuning telur, tepung maizena, susu cair, gula pasir, perasa, pengawet, pewarna makananTerigu Pro Tinggi, margarin, air, garam, telur, kuning telur, tepung maizena, susu cair, gula pasir, perasa, pengawet, pewarna makanan"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

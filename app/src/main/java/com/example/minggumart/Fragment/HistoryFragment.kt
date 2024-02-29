@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.minggumart.R
 import com.example.minggumart.adapter.BuyAgainAdapter
+import com.example.minggumart.databinding.BuyAgainItemBinding
 import com.example.minggumart.databinding.FragmentHistoryBinding
 
 class HistoryFragment : Fragment() {
@@ -33,6 +34,8 @@ class HistoryFragment : Fragment() {
         buyAgainAdapter = BuyAgainAdapter(buyAgainFoodName, buyAgainFoodPrice, buyAgainFoodImage)
         binding.BuyAgainRecyclerView.adapter = buyAgainAdapter
         binding.BuyAgainRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+
+        
     }
 
     companion object {

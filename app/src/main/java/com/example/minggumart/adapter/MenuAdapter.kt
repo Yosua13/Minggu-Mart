@@ -3,15 +3,22 @@ package com.example.minggumart.adapter
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
+import android.view.View
 import android.view.View.OnClickListener
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.minggumart.DetailsActivity
 import com.example.minggumart.databinding.MenuItemBinding
+import com.example.minggumart.model.MenuItem
 
-class MenuAdapter(private val menuItemName: List<String>, private val menuItemPrice: List<String>, private val menuImages: List<Int>, private val requireContext: Context) : RecyclerView.Adapter<MenuAdapter.MenuViewHolder>() {
-    private val itemClickListener: OnClickListener ?= null
+class MenuAdapter(
+    private val menuItemName: MutableList<String>,
+    private val menuItemPrice: MutableList<String>,
+    private val menuImages: MutableList<Int>,
+    private val requireContext: Context
+) : RecyclerView.Adapter<MenuAdapter.MenuViewHolder>() {
 
+    private val itemClickListener: OnClickListener? = null
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuViewHolder {
         val binding = MenuItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return MenuViewHolder(binding)
@@ -39,6 +46,7 @@ class MenuAdapter(private val menuItemName: List<String>, private val menuItemPr
 
             }
         }
+
         fun bind(position: Int) {
             binding.apply {
                 menuFoodName.text = menuItemName[position]
@@ -49,6 +57,7 @@ class MenuAdapter(private val menuItemName: List<String>, private val menuItemPr
         }
 
     }
+
     interface OnClickListener {
         fun onItemClick(position: Int)
     }

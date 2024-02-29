@@ -8,12 +8,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.minggumart.DetailsActivity
 import com.example.minggumart.databinding.PopulerItemBinding
 
-class PopulerAdaptor(private val items: List<String>, private val price: List<String>, private val image: List<Int>, private val requireContext: Context) : RecyclerView.Adapter<PopulerAdaptor.PopulerViewHolder>() {
+class PopulerAdaptor(
+    private val items: List<String>,
+    private val price: List<String>,
+    private val image: List<Int>,
+    private val requireContext: Context
+) : RecyclerView.Adapter<PopulerAdaptor.PopulerViewHolder>() {
 
-    override fun onCreateViewHolder(
-        parent: ViewGroup,
-        viewType: Int
-    ): PopulerAdaptor.PopulerViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PopulerAdaptor.PopulerViewHolder {
         return PopulerViewHolder(PopulerItemBinding.inflate(LayoutInflater.from(parent.context), parent, false))
     }
 
